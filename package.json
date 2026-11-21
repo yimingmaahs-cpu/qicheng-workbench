@@ -1,0 +1,24 @@
+{
+  "name": "offer-workbench-private",
+  "version": "0.13.4",
+  "private": true,
+  "type": "module",
+  "description": "本地简历与求职工作台",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning local-server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "package": "node scripts/build-release.mjs"
+  },
+  "dependencies": {
+    "imapflow": "2.0.5",
+    "mailparser": "3.9.28",
+    "mammoth": "^1.11.0",
+    "playwright-core": "^1.63.0",
+    "sortablejs": "1.15.6",
+    "tabulator-tables": "6.3.1",
+    "unpdf": "^1.4.0"
+  }
+}

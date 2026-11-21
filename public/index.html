@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light"><meta name="description" content="连接自己的岗位来源、优化简历、跟踪投递与求职邮件。">
+  <title>启程 · 私人求职工作台</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/vendor/tabulator.css"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/private.css">
+</head>
+<body>
+  <aside class="sidebar" id="workspace-sidebar">
+    <div class="brand"><button type="button" id="sidebar-toggle" class="sidebar-toggle" aria-label="收起侧边栏" title="收起侧边栏" aria-expanded="true" aria-controls="workspace-sidebar"><img src="/favicon.svg" alt="" width="38" height="38"></button><a class="brand-name" href="#resumes" data-view="resumes" aria-label="启程 · 我的简历">启程<small>求职工作台</small></a></div>
+    <div class="workspace-label">个人空间 <span>LOCAL</span></div>
+    <nav aria-label="工作台导航"><button class="nav-item" data-view="sources"><span data-icon="target"></span><span class="nav-label">我的来源</span></button>
+      <button class="nav-item active" data-view="resumes"><span data-icon="file"></span><span class="nav-label">我的简历</span><span class="nav-count" id="nav-resumes">0</span></button>
+      <div class="review-nav-group">
+        <div class="review-nav-row">
+          <button class="nav-item" id="review-nav-toggle" data-action="open-reviews" aria-expanded="false" aria-controls="review-subnav"><span data-icon="spark"></span><span class="nav-label">简历评审</span></button>
+          <button class="nav-disclosure" id="review-nav-disclosure" data-action="toggle-reviews" aria-label="展开简历评审流程" aria-expanded="false" aria-controls="review-subnav"><span class="nav-chevron" aria-hidden="true">⌄</span></button>
+        </div>
+        <div id="review-subnav" class="review-subnav" hidden></div>
+      </div>
+      
+      <button class="nav-item" data-view="jobs"><span data-icon="file"></span><span class="nav-label">我的岗位</span></button>
+      <button class="nav-item" data-view="applications"><span data-icon="check"></span><span class="nav-label">投递跟踪</span></button>
+      <button class="nav-item" data-view="mail"><span data-icon="note"></span><span class="nav-label">邮箱追踪</span></button>
+    </nav>
+    <div class="sidebar-note"><span class="eyebrow">从一份好简历开始</span><p>梳理经历，找到亮点。<br>让下一次出发更有准备。</p><div class="note-lines"><i></i><i></i><i></i><span>↗</span></div></div>
+    <div class="sidebar-bottom"><button class="nav-item" data-view="account"><span data-icon="settings"></span><span class="nav-label">本地设置</span></button><div class="local-status"><i></i><span>数据保存在本机</span><span class="version">v0.11.0 本地</span></div></div>
+  </aside>
+  <div class="shell">
+    <header class="topbar"><div><span class="muted">工作空间</span><span class="crumb">/</span><span id="breadcrumb">我的简历</span></div><div class="topbar-right"><span class="local-pill"><i></i>私人来源版</span></div></header>
+    <main id="main"><div class="loading-state">正在打开工作台…</div></main>
+    <footer>启程 · 每一步，都离下一份机会更近。<span>你的经历，由你定义。</span></footer>
+  </div>
+  <dialog id="modal" aria-labelledby="modal-title"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input id="file-input" type="file" accept=".pdf,.docx,.txt,.md" hidden>
+  <script type="module" src="/private-bootstrap.js"></script>
+</body>
+</html>
