@@ -1,6 +1,6 @@
 {
   "name": "offer-workbench-private",
-  "version": "0.13.4",
+  "version": "0.13.5",
   "private": true,
   "type": "module",
   "description": "本地简历与求职工作台",
