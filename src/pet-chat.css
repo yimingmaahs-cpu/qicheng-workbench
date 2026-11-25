@@ -1,0 +1,19 @@
+.pet-chat-page,.pet-chat-page #app{margin:0;width:100vw;height:100vh;overflow:hidden;background:transparent}
+.pet-chat-page{font:13px/1.6 "Segoe UI","Microsoft YaHei UI",sans-serif;color:#354e3e}
+.pet-chat-card{display:flex;flex-direction:column;gap:6px;max-height:224px;margin:8px;padding:8px;border:1px solid #bdccb6;border-radius:13px;background:#f8faf3;box-shadow:0 2px 7px #263d3420;box-sizing:border-box}
+.pet-chat-card button,.pet-chat-card textarea{font:inherit;color:inherit}
+.pet-chat-card button{cursor:pointer;white-space:nowrap}
+.pet-chat-card button:disabled{opacity:.5;cursor:default}
+.pet-chat-card :focus-visible{outline:2px solid #a68c59;outline-offset:2px}
+.pet-chat-close{border:0;background:transparent;padding:0;font-size:20px!important;line-height:24px;width:24px;color:#71806a!important}
+.pet-chat-notice{margin:0;padding:0 3px;color:#8d5949;font-size:11px;line-height:1.6;max-height:36px;overflow:auto;overflow-wrap:anywhere}
+.pet-chat-setup{align-self:flex-start;border:1px solid #cbd8c1;border-radius:7px;padding:4px 8px;background:#edf3e7;font-size:11px!important}
+.pet-chat-composer{margin:0;flex:none}
+.pet-chat-composer textarea{display:block;width:100%;resize:none;box-sizing:border-box;border:1px solid #d6dfce;border-radius:8px;background:#fffefa;padding:7px 9px;font-size:14px;line-height:1.6;min-height:38px;max-height:84px;overflow-y:hidden;scrollbar-width:thin}
+.pet-chat-composer textarea::placeholder{color:#9ba490}
+.pet-chat-controls{display:flex;align-items:center;gap:6px;margin-top:5px}
+.pet-chat-controls small{flex:1;color:#8a967e;font-size:10px;line-height:1.5;padding-left:3px}
+.pet-chat-send,.pet-chat-stop{border:1px solid #406149;border-radius:7px;padding:3px 10px;line-height:1.5!important;font-size:12px!important}
+.pet-chat-send{background:#406149;color:#fffefa!important}
+.pet-chat-stop{background:transparent;border-color:#cbd7c2;color:#74826c!important}
+.pet-chat-card [hidden]{display:none!important}

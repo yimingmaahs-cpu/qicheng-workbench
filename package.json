@@ -1,0 +1,69 @@
+{
+  "name": "felt-companions",
+  "version": "0.1.8",
+  "private": true,
+  "description": "毛毡伙伴 · 可更换三维角色的 Windows 桌宠",
+  "author": "Felt Companions",
+  "type": "module",
+  "main": "dist-electron/main.cjs",
+  "scripts": {
+    "build": "tsc --noEmit && vite build && node scripts/build-main.mjs",
+    "start": "npm run build && electron .",
+    "dev": "vite --host 127.0.0.1",
+    "package": "npm run build && electron-builder --win nsis --x64",
+    "package:dir": "npm run build && electron-builder --win --dir --x64"
+  },
+  "dependencies": {
+    "three": "latest",
+    "yauzl": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/three": "latest",
+    "@types/yauzl": "latest",
+    "electron": "44.2.0",
+    "electron-builder": "latest",
+    "esbuild": "latest",
+    "typescript": "latest",
+    "tsx": "latest",
+    "vite": "latest",
+    "playwright": "latest",
+    "fflate": "latest"
+  },
+  "build": {
+    "appId": "local.felt.companions",
+    "productName": "毛毡伙伴",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "assets/templates",
+        "to": "templates"
+      },
+      {
+        "from": "assets/tray.png",
+        "to": "tray.png"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/icon.ico",
+      "signExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    },
+    "artifactName": "Felt-Companions-${version}-${arch}-Setup.${ext}"
+  }
+}

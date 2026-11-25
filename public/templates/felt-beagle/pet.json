@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "id": "felt-beagle",
+  "name": "比格·烧冬瓜",
+  "model": "model.glb",
+  "preview": "preview.png",
+  "draft": true,
+  "scale": 1,
+  "facing": 0,
+  "look": {
+    "head": "Head",
+    "neck": "Neck",
+    "yawAxis": "y",
+    "pitchAxis": "x",
+    "yawSign": 1,
+    "pitchSign": 1,
+    "yawLimit": 18,
+    "pitchLimit": 10
+  },
+  "animations": {
+    "idle": "Idle",
+    "walk": "Walk",
+    "react": "React",
+    "drag": "Drag",
+    "rest": "Rest",
+    "restIn": "RestIn",
+    "restOut": "RestOut"
+  },
+  "walkSpeed": 20
+}

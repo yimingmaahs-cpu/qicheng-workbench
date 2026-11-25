@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "id": "felt-rabbit",
+  "name": "垂耳兔·陈慎",
+  "model": "model.glb",
+  "preview": "preview.png",
+  "draft": true,
+  "scale": 1,
+  "facing": 0,
+  "look": {
+    "head": "Head",
+    "neck": "Neck",
+    "yawAxis": "y",
+    "pitchAxis": "x",
+    "yawSign": 1,
+    "pitchSign": 1,
+    "yawLimit": 12,
+    "pitchLimit": 6
+  },
+  "animations": {
+    "idle": "Idle",
+    "walk": "Walk",
+    "react": "React",
+    "drag": "Drag",
+    "rest": "Rest",
+    "restIn": "RestIn",
+    "restOut": "RestOut"
+  },
+  "walkSpeed": 20
+}

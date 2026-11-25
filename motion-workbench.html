@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>毛毡伙伴 · 动作工作台</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f2ed;color:#283831;font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1180px;margin:auto;padding:30px 24px}h1{font-size:28px;line-height:1.3;margin:0 0 8px}p{margin:0;color:#596960}.tag{font-size:12px;letter-spacing:2px;color:#4c7667;margin-bottom:10px}.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:18px 0}label{display:flex;align-items:center;gap:8px}select,button{font:inherit;border:1px solid #ccd4ca;border-radius:8px;background:#fff;padding:8px 12px;color:inherit}button{cursor:pointer}button.primary{background:#345d4c;color:white;border-color:#345d4c}button:disabled{opacity:.5;cursor:wait}input{accent-color:#345d4c}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:#fffdf8;border:1px solid #dddcd1;border-radius:18px;overflow:hidden}.card h2{font-size:20px;margin:16px 20px 0}.card p{font-size:13px;margin:2px 20px}.stage{height:410px;background:radial-gradient(ellipse at 50% 60%,#fffdf8,#e8ece3)}.timeline{display:flex;align-items:center;gap:12px;padding:18px 0}.timeline input{flex:1}output{font-variant-numeric:tabular-nums;min-width:50px}.note{background:#e8ede5;padding:14px 18px;border-radius:12px;font-size:14px}#status{margin-top:14px;font-size:13px}a{color:#345d4c}details{margin-top:18px;font-size:13px}pre{white-space:pre-wrap;overflow-wrap:anywhere}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #b89c56;outline-offset:2px}@media(max-width:720px){main{padding:20px 14px}.grid{grid-template-columns:1fr}.stage{height:340px}}
+</style></head><body><main>
+<div class="tag">毛毡伙伴 / 动作制作预览</div><h1>一份动作，两种性格</h1><p>对照两只角色的动作、体型适配与挂件跟随。</p>
+<div class="toolbar">
+<label>动作<select id="variant"><option value="shared">共享招呼</option><option value="character">角色招呼</option><option value="baseline">原版招呼</option></select></label>
+<label>显示<select id="appearance"><option value="model">正式外观</option><option value="proxy">简化白模</option></select></label>
+<label>视角<select id="angle"><option value="0">正面</option><option value="90">侧面</option><option value="180">背面</option></select></label>
+<label><input type="checkbox" id="accessories">挂件示例</label>
+<button class="primary" id="play" disabled>播放</button><button id="replay" disabled>重播</button><button id="interrupt" disabled>模拟拖动打断</button>
+</div>
+<div class="grid"><section class="card"><h2>烧冬瓜</h2><p>比格 · 轻快的回应</p><div class="stage" id="beagle"></div></section><section class="card"><h2>陈慎</h2><p>垂耳兔 · 克制的回应</p><div class="stage" id="rabbit"></div></section></div>
+<div class="timeline"><label for="timeline">动作进度</label><input id="timeline" type="range" min="0" max="1000" value="0"><output id="progress">0%</output></div>
+<div class="note">“共享招呼”来自同一份动作；“角色招呼”在此基础上调整幅度与节奏。白模用于看姿势，正式外观用于检查变形。当前为制作样板，尚未替换已安装桌宠。</div>
+<p id="status" role="status">正在加载动作样板…</p>
+<details><summary>制作信息</summary><pre id="provenance"></pre></details>
+</main><script type="module" src="/src/motion-workbench.ts"></script></body></html>
